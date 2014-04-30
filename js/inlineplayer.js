@@ -33,10 +33,10 @@ function InlinePlayer() {
 
   this.css = {
     // CSS class names appended to link during various states
-    sDefault: 'sm2_link', // default state
-    sLoading: 'sm2_loading',
-    sPlaying: 'sm2_playing',
-    sPaused: 'sm2_paused'
+    sDefault: 'ss-play', // default state sm2_link
+    sLoading: 'ss-loading', // sm2_loading
+    sPlaying: 'ss-pause', // sm2_playing
+    sPaused: 'ss-play' // sm2_paused
   }
 
   this.addEventHandler = (typeof window.addEventListener !== 'undefined' ? function(o, evtName, evtHandler) {
