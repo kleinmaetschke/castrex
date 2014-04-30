@@ -1,0 +1,280 @@
+/* GLOBAL STYLES */
+$pink: #d94456;
+$lightpink: #EB6E81;
+$h3pink: #ffc6d7;
+$gray: #606060;
+$black: #2a2a2a;
+$textgrad-start: #d1001c;
+$textgrad-end: #f5005a;
+
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_0_0.eot');src: url('webfonts/29151E_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_0_0.woff') format('woff'),url('webfonts/29151E_0_0.ttf') format('truetype'); font-weight: 700; font-style: italic;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_1_0.eot');src: url('webfonts/29151E_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_1_0.woff') format('woff'),url('webfonts/29151E_1_0.ttf') format('truetype'); font-weight: 700; font-style: normal;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_2_0.eot');src: url('webfonts/29151E_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_2_0.woff') format('woff'),url('webfonts/29151E_2_0.ttf') format('truetype'); font-weight: 300; font-style: italic;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_3_0.eot');src: url('webfonts/29151E_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_3_0.woff') format('woff'),url('webfonts/29151E_3_0.ttf') format('truetype'); font-weight: 800; font-style: normal;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_4_0.eot');src: url('webfonts/29151E_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_4_0.woff') format('woff'),url('webfonts/29151E_4_0.ttf') format('truetype'); font-weight: 800; font-style: italic;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_5_0.eot');src: url('webfonts/29151E_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_5_0.woff') format('woff'),url('webfonts/29151E_5_0.ttf') format('truetype'); font-weight: 300; font-style: normal;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_6_0.eot');src: url('webfonts/29151E_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_6_0.woff') format('woff'),url('webfonts/29151E_6_0.ttf') format('truetype'); font-weight: 200; font-style: normal;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_7_0.eot');src: url('webfonts/29151E_7_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_7_0.woff') format('woff'),url('webfonts/29151E_7_0.ttf') format('truetype'); font-weight: 200; font-style: italic;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_8_0.eot');src: url('webfonts/29151E_8_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_8_0.woff') format('woff'),url('webfonts/29151E_8_0.ttf') format('truetype'); font-weight: 400; font-style: italic;}
+@font-face {font-family: 'Clear Sans Screen';src: url('webfonts/29151E_9_0.eot');src: url('webfonts/29151E_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/29151E_9_0.woff') format('woff'),url('webfonts/29151E_9_0.ttf') format('truetype'); font-weight: 400; font-style: normal;}
+
+body {
+    font-family: 'Clear Sans Screen', sans-serif;
+    font-weight: 300;
+    color: white;
+    background: $pink;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Clear Sans Screen', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    &.logo {
+        font-size: 90px;
+        font-family: 'Mr Dafoe', cursive;
+        text-transform: none;
+        -webkit-text-fill-color: $pink;
+        background-image: -webkit-linear-gradient($textgrad-start 0%,  $textgrad-end 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-shadow: 0px -2px 3px $lightpink;
+        -webkit-filter: drop-shadow(0px 0px 50px #C63C3B);
+        -webkit-transform: skew(-2.5deg,-2.5deg);
+        position: relative;
+        top: -10px;
+        left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+        & > span {
+            font-size: 36px;
+            text-shadow: 0px -2px 3px $lightpink;
+            -webkit-filter: drop-shadow(0px 0px 3px #C63C3B);
+            position: relative;
+            top: -15px;
+            left: 0;
+        }
+    }
+}
+
+h2.logo {
+    color: white;
+    text-align: left;
+    font-family: 'Satisfy', cursive;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    top: -25px;
+    left: 0;
+    padding-left: 70px;
+}
+
+.header {
+    background: url('img/wood-table.jpg') no-repeat;
+    background-size: cover;
+    padding-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .dark {
+    background: rgba(0,0,0,0.82);
+    padding-top: 20px;
+}
+
+.photo {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    transform:rotate(10deg);
+    -ms-transform:rotate(10deg);
+    -webkit-transform:rotate(10deg);
+}
+
+.nav { background: $pink; border-top: 1px solid #A43241; border-bottom: 1px solid #A43241; }
+
+nav ul {
+    margin-bottom: 0;
+    li {
+        display: inline-block;
+        margin-right: 50px;
+        padding-top: 10px;
+        font-size: 24px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        &:last { margin-right: 0; }
+        a {
+            color: white;
+            &:hover {
+                color: shade($pink, 20%);
+            }
+        }
+    }
+}
+
+.ss-twitter {
+    position: relative;
+    top: 4px;
+    left: 0;
+}
+
+.most-recent {
+    background: white;
+    padding: 30px 0;
+    h1 {
+        font-size: 36px;
+        color: $pink;
+    }
+    h3 {
+        margin-top: 0;
+        color: $gray;
+        font-weight: 300;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    p {
+        color: $black;
+        font-weight: 300;
+        font-size: 18px;
+        a {
+            font-weight: 700;
+            color: $black;
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
+    a {
+        color: $pink;
+        &:hover {
+            color: shade($pink, 20%);
+        }
+    }
+    .tweep a p {
+        color: $pink;
+        &:hover {
+            color: shade($pink, 20%);
+        }
+    }
+}
+
+.content .large-12.columns { padding: 30px 0;}
+
+h3 {
+    margin-top: 0;
+    color: $h3pink;
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #2a2a2a;
+    font-weight: 300;
+    font-size: 18px;
+    a {
+        color: #2a2a2a;
+        font-weight: 700;
+        &:hover {
+            color: shade($pink, 20%);
+        }
+    }
+}
+
+a {
+    color: white;
+    &:hover {
+        color: shade($pink, 20%);
+    }
+    p { color: inherit; }
+}
+
+hr {
+    background: #B73848;
+    border: none;
+    height: 2px;
+}
+
+.tweep {
+    display: inline;
+    margin-right: 20px;
+    img { display: inline; }
+    p {
+        display: inline;
+        font-size: 14px;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.show-notes {
+    margin-top: 50px;
+    a {
+        background: #cc003e;
+        padding: 8px 10px 4px;
+    }
+    ol {
+        display: none;
+        margin-top: 20px;
+        color: shade($pink, 20%);
+        font-size: 12px;
+        p {
+            color: $black;
+            font-size: 14px;
+        }
+    }
+}
+
+.artwork-holster {
+    text-align: center;
+    .artwork {
+        width: 75%;
+        height: auto;
+        margin: 0 auto 20px;
+        border: 1px solid rgba(0,0,0,0.24);
+        box-shadow: 0 0 9px rgba(0,0,0,0.24);
+        position: relative;
+        img {
+        }
+        .artwork-overlay {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.79);
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            @include transition(ease-in-out 0.3s);
+            h4 {
+                color: white;
+                text-transform: uppercase;
+                margin-top: 30px;
+                margin-bottom: 0;
+                font-size: 42px;
+                font-weight: 300;
+                letter-spacing: -1px;
+                line-height: 48px;
+            }
+            h5 {
+                @extend h4;
+                margin-top: 0;
+            }
+        }
+        &:hover .artwork-overlay {
+            opacity: 1;
+            @include transition(ease-in-out 0.1s);
+        }
+    }
+    a {
+        text-transform: uppercase;
+    }
+}
