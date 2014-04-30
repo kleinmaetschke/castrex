@@ -78,12 +78,14 @@
           <div class="artwork-overlay">
             <h4>Season 3</h4>
             <h5>Episode 1</h5>
-            <div class="ui360">
-             <a href="files/091012.mp3">Play Episode</a>
-            </div>
+            <a href="files/091012.mp3" class="playButton inline-playable">
+              <span class="play">Play Episode</span>
+              <span class="pause">Pause Episode</span>
+              <span class="loading">Loading Episode...</span>
+            </a>
           </div>
         </div>
-        <a href="#">Download: MP3 Audio (45.6 MB)</a>
+        <a href="files/091012.mp3" class="inline-exclude">Download: MP3 Audio (45.6 MB)</a>
       </div>
       <div class="large-7 columns">
         <h1>Cheap Jeans</h1>
@@ -135,15 +137,7 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/soundmanager2-nodebug-jsmin.js"></script>
-    <script>
-      soundManager.setup({
-        // where to find flash audio SWFs, as needed
-        url: 'files/',
-        onready: function() {
-          // SM2 is ready to play audio!
-        }
-      });
-    </script>
+    <script src="js/inlineplayer.js"></script>
     <script>
       $(document).ready(function() {
         $('.show-notes a').click(function() {
