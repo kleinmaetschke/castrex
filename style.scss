@@ -268,6 +268,58 @@ hr {
                 @extend h4;
                 margin-top: 0;
             }
+            a.playButton {
+                text-decoration: none;
+                margin-top: 20px;
+                display: block;
+                background: white;
+                color: black;
+                &.sm2_link {
+                    span {
+                        display: none;
+                        &.play {
+                            display: block;
+                        }
+                    }
+                }
+                &.sm2_loading {
+                    span {
+                        display: none !important;
+                        &.loading {
+                            display: block !important;
+                        }
+                    }
+                }
+                &.sm2_playing {
+                    span {
+                        display: none !important;
+                        &.pause {
+                            display: block !important;
+                        }
+                    }
+                }
+                &.sm2_paused {
+                    span {
+                        display: none !important;
+                        &.play {
+                            display: block !important;
+                        }
+                    }
+                }
+
+                span {
+                    display: none;
+                    &.play {
+
+                    }
+                    &.loading {
+
+                    }
+                    &.pause {
+
+                    }
+                }
+            }
         }
         &:hover .artwork-overlay {
             opacity: 1;
