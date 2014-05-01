@@ -37,6 +37,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: -1px;
     margin-bottom: 0;
+    z-index: 200;
     &.logo {
         font-size: 90px;
         font-family: 'Mr Dafoe', cursive;
@@ -45,21 +46,25 @@ h1 {
         background-image: -webkit-linear-gradient($textgrad-start 0%,  $textgrad-end 100%);
         background-clip: text;
         -webkit-background-clip: text;
-        text-shadow: 0px -2px 3px $lightpink;
-        -webkit-filter: drop-shadow(0px 0px 50px #C63C3B);
-        -webkit-transform: skew(-2.5deg,-2.5deg);
         position: relative;
         top: -10px;
         left: 0;
         margin-bottom: 0;
         margin-top: 0;
+        -webkit-transform: skew(-2.5deg,-2.5deg);
+        &.glow {
+            text-shadow: 0px -2px 3px $lightpink;
+            -webkit-filter: drop-shadow(0px 0px 50px #C63C3B);
+        }
         & > span {
             font-size: 36px;
-            text-shadow: 0px -2px 3px $lightpink;
-            -webkit-filter: drop-shadow(0px 0px 3px #C63C3B);
             position: relative;
             top: -15px;
             left: 0;
+            &.glow {
+                text-shadow: 0px -2px 3px $lightpink;
+                -webkit-filter: drop-shadow(0px 0px 3px #C63C3B);
+            }
         }
     }
 }
@@ -91,8 +96,9 @@ h2.logo {
 
 .photo {
     position: absolute;
-    top: -150px;
+    top: 450px;
     left: 0;
+    z-index: 100;
     transform:rotate(10deg);
     -ms-transform:rotate(10deg);
     -webkit-transform:rotate(10deg);
@@ -112,6 +118,7 @@ nav ul {
         &:last { margin-right: 0; }
         a {
             color: white;
+            font-size: 18px;
             &:hover {
                 color: shade($pink, 20%);
             }
@@ -128,6 +135,7 @@ nav ul {
 .most-recent {
     background: white;
     padding: 30px 0;
+    border-bottom: 1px solid #A43241;
     h1 {
         font-size: 36px;
         color: $pink;
@@ -170,6 +178,7 @@ nav ul {
         margin-top: 40px;
         a {
             color: white;
+            border: 1px solid $pink;
         }
     }
 }
@@ -230,10 +239,12 @@ hr {
         background: #cc003e;
         padding: 8px 10px 4px;
         @include transition(ease-in-out 0.3s);
+        -webkit-backface-visibility: hidden;
         &:hover {
             background: white;
             color: #cc003e;
             @include transition(ease-in-out 0.1s);
+            -webkit-backface-visibility: hidden;
         }
     }
     ol {
@@ -251,6 +262,7 @@ hr {
 .artwork-holster {
     text-align: center;
     .artwork {
+        opacity: 0;
         width: 75%;
         height: auto;
         margin: 0 auto 20px;
@@ -260,7 +272,6 @@ hr {
         img {
         }
         .artwork-overlay {
-            opacity: 0;
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.79);
@@ -269,6 +280,7 @@ hr {
             left: 0;
             text-align: center;
             @include transition(ease-in-out 0.3s);
+            -webkit-backface-visibility: hidden;
             h4 {
                 color: white;
                 text-transform: uppercase;
@@ -295,11 +307,18 @@ hr {
                 margin: 20px auto 0;
                 font-size: 32px;
                 padding-top: 25px;
+                @include transition(ease-in-out 0.3s);
+                &:hover {
+                    background: white;
+                    @include transition(ease-in-out 0.1s);
+                }
                 &.sm2_link {
                     span {
                         display: none;
+                        @include transition(ease-in-out 0.1s);
                         &.play {
                             display: block;
+                            @include transition(ease-in-out 0.1s);
                             padding-left: 8px;
                         }
                     }
@@ -307,24 +326,30 @@ hr {
                 &.sm2_loading {
                     span {
                         display: none !important;
+                        @include transition(ease-in-out 0.1s);
                         &.loading {
                             display: block !important;
+                            @include transition(ease-in-out 0.1s);
                         }
                     }
                 }
                 &.sm2_playing {
                     span {
                         display: none !important;
+                        @include transition(ease-in-out 0.1s);
                         &.pause {
                             display: block !important;
+                            @include transition(ease-in-out 0.1s);
                         }
                     }
                 }
                 &.sm2_paused {
                     span {
                         display: none !important;
+                        @include transition(ease-in-out 0.1s);
                         &.play {
                             display: block !important;
+                            @include transition(ease-in-out 0.1s);
                             padding-left: 8px;
                         }
                     }
@@ -332,6 +357,7 @@ hr {
 
                 span {
                     display: none;
+                    @include transition(ease-in-out 0.1s);
                     &.play {
 
                     }
@@ -344,12 +370,15 @@ hr {
                 }
             }
         }
-        &:hover .artwork-overlay {
-            opacity: 1;
-            @include transition(ease-in-out 0.1s);
-        }
     }
     a {
         text-transform: uppercase;
+        font-size: 14px;
+    }
+}
+
+.footer {
+    p {
+        font-size: 14px;
     }
 }
